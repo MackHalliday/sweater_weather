@@ -23,3 +23,9 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore coverage folder
+/coverage
+/coverage/*
+/coverage/index.html
+/coverage/.resultset.json
