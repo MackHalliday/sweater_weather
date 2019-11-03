@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'google geocode service' do
-  it 'can return longitude and ladiude for city' do
+  it 'can return longitude and ladiude for city', :vcr do
     service = GoogleGeocodeService.new
     city = "Denver"
     state = "Colorado"
