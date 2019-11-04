@@ -1,9 +1,11 @@
 class Api::V1::ForecastController < ApplicationController
   def show
-    render json: LocalWeatherSerializer.new(location_params)
+    facade = ForecastFacade.new(location_params)
+    render json: ForecastSerializer.new(facade)
   end
 
+  private
   def location_params
-    params.permit(:location)
+    params["location"]
   end
 end
