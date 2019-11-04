@@ -25,10 +25,8 @@ describe "antipode weather endpoint" do
     #     ]
     # }
 
-    binding.pry
-
-    expect(json_response[:data][:id]).to have_key("1")
-    expect(json_response[:data][:type]).to have_key("antipode")
+    expect(json_response[:data][:id]).to eq("1")
+    expect(json_response[:data][:type]).to eq("antipode")
     expect(json_response[:data][:attributes]).to have_key(:location_name)
     expect(json_response[:data][:attributes][:forecast]).to have_key(:summary)
     expect(json_response[:data][:attributes][:forecast]).to have_key(:current_temperature)
