@@ -1,8 +1,8 @@
 class GoogleGeocodeService
 
-  def get_coordinates(city, state)
+  def get_geocode_data(location)
     json_response = conn.get('/maps/api/geocode/json') do |request|
-      request.params['address'] = "#{city}+#{state}"
+      request.params['address'] = location
       request.params['key'] = ENV['google_geocode']
     end
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
