@@ -11,8 +11,16 @@ class AntipodeFacade
     Location.new(start_city_geocode_data)
   end
 
+  def start_city_latitude
+    start_city_location_info.latitude
+  end
+
+  def start_city_longitude
+    start_city_location_info.longitude
+  end
+
   def find_antipode_city
-    AntipodeService.new.get_antipode(start_city_location_info.latitude, start_city_location_info.longitude)
+    AntipodeService.new.get_antipode(start_city_latitude, start_city_longitude)
   end
 
   def find_location_by_lat_long
@@ -59,8 +67,8 @@ class AntipodeFacade
 
   def data
     [{
-      id: find_antipode_city[:id],
-      type: find_antipode_city[:type],
+      id: find_antipode_city[:data][:id],
+      type: find_antipode_city[:data][:type],
       attributes: antipode_attributes,
       search_location: start_city_location_info.formatted_address
     }]
