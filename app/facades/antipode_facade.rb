@@ -58,11 +58,11 @@ class AntipodeFacade
   end
 
   def data
-      {
-        id: find_antipode_city[:data][:id],
-        type: find_antipode_city[:data][:type],
-        attributes: antipode_attributes,
-        search_location: start_city_location_info.formatted_address
-      }
+    [{
+      id: find_antipode_city[:id],
+      type: find_antipode_city[:type],
+      attributes: antipode_attributes,
+      search_location: start_city_location_info.formatted_address
+    }]
   end
 end
