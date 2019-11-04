@@ -6,8 +6,6 @@ describe 'dark sky service' do
     longitude = 39.7392358
     latitude = -104.990251
 
-    #https://api.darksky.net/forecast/API_KEY/39.7392358,-104.990251
-
     raw_data = service.get_weather(longitude, latitude)
 
     expect(service).to be_a(DarkSkyService)
