@@ -14,10 +14,9 @@ describe "local weather endpoint" do
     expect(json_response[:location]).to have_key(:country)
 
     expect(json_response[:current_weather]).to have_key(:time)
-    expect(json_response[:current_weather]).to have_key(:date)
+    expect(json_response[:current_weather]).to have_key(:current_temp)
     expect(json_response[:current_weather]).to have_key(:high_temp)
     expect(json_response[:current_weather]).to have_key(:low_temp)
-    expect(json_response[:current_weather]).to have_key(:current_temp)
     expect(json_response[:current_weather]).to have_key(:weather_icon)
 
     expect(json_response[:details]).to have_key(:feels_like)
