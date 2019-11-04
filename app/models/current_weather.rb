@@ -1,6 +1,7 @@
 require 'date'
 
 class CurrentWeather
+  attr_reader :summary, :temperature
   def initialize(data)
     @time = time(data)
     @summary = data[:summary]
