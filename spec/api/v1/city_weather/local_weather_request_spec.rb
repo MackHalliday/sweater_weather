@@ -2,12 +2,12 @@ require 'rails_helper'
 
 describe "local weather endpoint" do
   it "can return current local weather and forecast" do
-  skip 
+  skip
     get "/api/v1/forecast?location=denver,co"
 
     expect(response).to be_successful
 
-    json_response = JSON.parse(response.body)
+    json_response = JSON.parse(response.body, symbolize_names: true)
 
     expect(json_response[:location]).to have_key(:city)
     expect(json_response[:location]).to have_key(:state)

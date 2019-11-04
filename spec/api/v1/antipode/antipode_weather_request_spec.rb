@@ -6,7 +6,7 @@ describe "antipode weather endpoint" do
 
     expect(response).to be_successful
 
-    json_response = JSON.parse(response.body)
+    json_response = JSON.parse(response.body, symbolize_names: true)
 
     #     {
     #     "data": [
@@ -24,6 +24,8 @@ describe "antipode weather endpoint" do
     #         }
     #     ]
     # }
+
+    binding.pry
 
     expect(json_response[:data][:id]).to have_key("1")
     expect(json_response[:data][:type]).to have_key("antipode")
