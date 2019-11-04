@@ -8,23 +8,6 @@ describe "antipode weather endpoint" do
 
     json_response = JSON.parse(response.body, symbolize_names: true)
 
-    #     {
-    #     "data": [
-    #         {
-    #             "id": "1",
-    #             "type": "antipode",
-    #             "attributes": {
-    #                 "location_name": "Antipode City Name",
-    #                 "forecast": {
-    #                     "summary": "Mostly Cloudy,
-    #                     "current_temperature": "72",
-    #                                 },
-    #             "search_location": "Hong Kong"
-    #             }
-    #         }
-    #     ]
-    # }
-
     expect(json_response[:data][:id]).to eq("1")
     expect(json_response[:data][:type]).to eq("antipode")
     expect(json_response[:data][:attributes]).to have_key(:location_name)
