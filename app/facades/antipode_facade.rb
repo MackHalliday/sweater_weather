@@ -11,16 +11,28 @@ class AntipodeFacade
     Location.new(start_city_geocode_data)
   end
 
-  def antipode_city_data
+  def find_antipode_city
     AntipodeService.new.get_antipode(start_city_location_info.latitude, start_city_location_info.longitude)
   end
 
+  def find_location_by_lat_long
+    latitude = find_antipode_city[:data][:attributes][:lat]
+    longitude = find_antipode_city[:data][:attributes][:long]
+
+    GoogleGeocodeService.new.reverse_geocode(latitude, longitude)
+  end
+
+  def antipode_geocode_data
+    address = find_location_by_lat_long[:results][0][:formatted_address]
+    GoogleGeocodeService.new.get_geocode_data(address)
+  end
+
   def antipode_location_info
-    Location.new(antipode_city_data)
+    Location.new(antipode_geocode_data)
   end
 
   def antipode_dark_sky_data
-    DarkSkyService.new.get_weather(location_info.latitude, location_info.longitude)
+    DarkSkyService.new.get_weather(antipode_location_info.latitude, antipode_location_info.longitude)
   end
 
   def antipode_weather_current_data
@@ -47,10 +59,10 @@ class AntipodeFacade
 
   def data
       {
-        id: antipode_city_data[:id],
-        type: antipode_city_data[:antipode],
+        id: find_antipode_city[:data][:id],
+        type: find_antipode_city[:data][:type],
         attributes: antipode_attributes,
-        search_location: start_city_location_info.formated_address
+        search_location: start_city_location_info.formatted_address
       }
   end
 end
