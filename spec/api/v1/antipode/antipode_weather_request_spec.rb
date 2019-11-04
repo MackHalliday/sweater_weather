@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe "antipode weather endpoint" do
   it "can return current local weather and forecast for antipode city" do
+
+    #Can use VCR/Fixtures to stub the several API request
+    
     get "/api/v1/antipode?location=hongkong"
 
     expect(response).to be_successful

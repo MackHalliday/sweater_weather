@@ -1,4 +1,6 @@
 class AntipodeFacade
+
+  #Needs refactor, several repeating methods between start_city and antipode
   def initialize(location)
     @start_city = location
   end
