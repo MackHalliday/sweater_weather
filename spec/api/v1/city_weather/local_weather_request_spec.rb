@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "local weather endpoint" do
   it "can return current local weather and forecast" do
-
+  skip 
     get "/api/v1/forecast?location=denver,co"
 
     expect(response).to be_successful
