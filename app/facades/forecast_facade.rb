@@ -28,12 +28,21 @@ class ForecastFacade
   end
 
   def daily_weather
-    daily_data.map do |data|
-      DailyWeather.new(data)
+    daily_data.map.each_with_index do |data, index|
+      DailyWeather.new(data, index + 1)
     end
   end
 
   def summary
     Summary.new(dark_sky_data)
+  end
+
+  def data
+    { id: 1,
+      location: location_info,
+      summary: summary,
+      current_weather: current_weather,
+      daily_weather: daily_weather,
+    }
   end
 end

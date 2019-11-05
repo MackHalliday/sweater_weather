@@ -1,7 +1,8 @@
 require 'date'
 
 class DailyWeather
-  def initialize(data)
+  def initialize(data, index)
+    @id = index
     @time = time(data)
     @summary = data[:summary]
     @precipation_probability = data[:precipProbability]
