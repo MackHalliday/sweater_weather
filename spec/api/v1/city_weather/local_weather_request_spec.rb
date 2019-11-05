@@ -7,35 +7,39 @@ describe "local weather endpoint" do
 
     expect(response).to be_successful
 
-    json_response = JSON.parse(response.body, s)
+    json_response = JSON.parse(response.body, symbolize_names: true)
+
 
     expect(json_response[:data][:location]).to have_key(:city)
     expect(json_response[:data][:location]).to have_key(:state)
     expect(json_response[:data][:location]).to have_key(:country)
 
+    expect(json_response[:data][:summary]).to have_key(:current)
+    expect(json_response[:data][:summary]).to have_key(:in_six_hours)
+    expect(json_response[:data][:summary]).to have_key(:in_twelve_hours)
+    expect(json_response[:data][:summary]).to have_key(:all_day)
+
     expect(json_response[:data][:current_weather]).to have_key(:time)
-    expect(json_response[:data][:current_weather]).to have_key(:current_temp)
-    expect(json_response[:data][:current_weather]).to have_key(:high_temp)
-    expect(json_response[:data][:current_weather]).to have_key(:low_temp)
-    expect(json_response[:data][:current_weather]).to have_key(:weather_icon)
+    expect(json_response[:data][:current_weather]).to have_key(:summary)
+    expect(json_response[:data][:current_weather]).to have_key(:precipation_probability)
+    expect(json_response[:data][:current_weather]).to have_key(:apparent_temperature)
+    expect(json_response[:data][:current_weather]).to have_key(:humidity)
+    expect(json_response[:data][:current_weather]).to have_key(:visibility)
+    expect(json_response[:data][:current_weather]).to have_key(:uv_index)
 
-    expect(json_response[:data][:details]).to have_key(:feels_like)
-    expect(json_response[:data][:details]).to have_key(:humidity)
-    expect(json_response[:data][:details]).to have_key(:visibility)
-    expect(json_response[:data][:details]).to have_key(:uv_index)
-    expect(json_response[:data][:details]).to have_key(:today_description)
-    expect(json_response[:data][:details]).to have_key(:tonight_description)
-    expect(json_response[:data][:details]).to have_key(:weather_icon)
+    expect(json_response[:data][:daily_weather]).to be_an(Array)
+    expect(json_response[:data][:daily_weather].count).to eq(8)
 
-    expect(json_response[:data][:forecast]).to be_an(Array)
-    expect(json_response[:data][:forecast].count).to eq(8)
-
-    (json_response[:data][:forecast]).each do |date|
-      expect(date).to have_key(:average_temp)
-      expect(date).to have_key(:high_temp)
-      expect(date).to have_key(:low_temp)
-      expect(date).to have_key(:chance_of_precipitation)
-      expect(date).to have_key(:weather_icon)
+    (json_response[:data][:daily_weather]).each do |date|
+      expect(date).to have_key(:id)
+      expect(date).to have_key(:time)
+      expect(date).to have_key(:summary)
+      expect(date).to have_key(:precipation_probability)
+      expect(date).to have_key(:temperature_high)
+      expect(date).to have_key(:temperature_low)
+      expect(date).to have_key(:humidity)
+      expect(date).to have_key(:visibility)
+      expect(date).to have_key(:uv_index)
     end
   end
 end
