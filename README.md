@@ -37,7 +37,6 @@ Add API Keys
 - Open `application.yml` file
 - NEED TO FINISH 
 
-
 ## Testing Suite
 Run the test suite:
 ```
