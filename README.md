@@ -39,7 +39,7 @@ Returns current weather and forecast for location
 
   ``` GET /api/v1/backgrounds?location=denver,co```
 
-  ```location```: desired city location with state or country
+  ```location```: Desired city location with state or country
 
   [View Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
 
@@ -92,10 +92,11 @@ Returns current weather and forecast for location
 ### Road Trip
 
   Returns details for road trip including travel time and weather at destination
-  
-  If successful, will return details for road trip
-
+   
   Must include valid API key
+  
+  If successful, will return details for road trip and status 201
+
 
   ``` POST /api/v1/road_trip ```
   
@@ -109,7 +110,7 @@ Returns current weather and forecast for location
   
   ```origin```: Starting city with state or country
   
-  ```destination```: Ending cit with state or country 
+  ```destination```: Ending city with state or country 
   
   ```api_key```: Valid API key given to user when account created
   
