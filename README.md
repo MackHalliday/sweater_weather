@@ -6,7 +6,7 @@
 ## Contents 
  * [About](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#about-the-project)
  * [Endpoints](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#endpoints)
- * [Local Setup](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local_setup)
+ * [Local Setup](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local-setup)
  * [Testing Suite](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#testing-suite)
  * [Running Application](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#running-application)
  * [Tech](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#tech)
