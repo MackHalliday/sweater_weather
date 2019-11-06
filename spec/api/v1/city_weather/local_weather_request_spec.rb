@@ -12,8 +12,8 @@ describe "local weather endpoint" do
     expect(json_response[:data][:location]).to have_key(:formatted_address)
 
     expect(json_response[:data][:summary]).to have_key(:current)
-    expect(json_response[:data][:summary]).to have_key(:in_six_hours)
-    expect(json_response[:data][:summary]).to have_key(:in_twelve_hours)
+    expect(json_response[:data][:summary]).to have_key(:tonight)
+    expect(json_response[:data][:summary]).to have_key(:today)
     expect(json_response[:data][:summary]).to have_key(:all_day)
 
     expect(json_response[:data][:current_weather]).to have_key(:time)

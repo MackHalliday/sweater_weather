@@ -44,7 +44,7 @@ class ForecastFacade
   end
 
   def summary
-    @summary ||= Summary.new(dark_sky_data)
+    @summary ||= Summary.new(dark_sky_data, location_info.latitude, location_info.longitude)
   end
 
   def data
