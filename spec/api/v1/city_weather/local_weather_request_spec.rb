@@ -38,5 +38,20 @@ describe "local weather endpoint" do
       expect(date).to have_key(:visibility)
       expect(date).to have_key(:uv_index)
     end
+
+    expect(json_response[:data][:hourly_weather]).to be_an(Array)
+    expect(json_response[:data][:hourly_weather].count).to eq(8)
+
+    (json_response[:data][:hourly_weather]).each do |date|
+      expect(date).to have_key(:id)
+      expect(date).to have_key(:time)
+      expect(date).to have_key(:summary)
+      expect(date).to have_key(:precipation_probability)
+      expect(date).to have_key(:temperature_high)
+      expect(date).to have_key(:temperature_low)
+      expect(date).to have_key(:humidity)
+      expect(date).to have_key(:visibility)
+      expect(date).to have_key(:uv_index)
+    end
   end
 end
