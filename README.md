@@ -158,6 +158,8 @@ $ rails s
 
 * [vcr](https://github.com/vcr/vcr)
 * [figaro](https://github.com/laserlemon/figaro)
+* [faraday](https://github.com/lostisland/faraday)
+* [bcrypt](https://rubygems.org/gems/bcrypt/versions/3.1.12)
 
 ### Versions
 * Ruby 2.4.1
