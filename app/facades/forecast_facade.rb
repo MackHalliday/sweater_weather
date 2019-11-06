@@ -19,6 +19,10 @@ class ForecastFacade
     dark_sky_data[:currently]
   end
 
+  def hourly_data
+    dark_sky_data[:daily][:data]
+  end
+
   def daily_data
     dark_sky_data[:daily][:data]
   end
@@ -27,8 +31,13 @@ class ForecastFacade
     @current_weather ||= CurrentWeather.new(current_data)
   end
 
-  def daily_weather
+  def hourly_weather
+    hourly_data.map.each_with_index do |data, index|
+      HourlyWeather.new(data, index + 1)
+    end
+  end
 
+  def daily_weather
     daily_data.map.each_with_index do |data, index|
       DailyWeather.new(data, index + 1)
     end
@@ -39,6 +48,6 @@ class ForecastFacade
   end
 
   def data
-    ForecastData.new(summary, location_info, current_weather, daily_weather)
+    ForecastData.new(summary, location_info, current_weather, hourly_weather, daily_weather)
   end
 end
