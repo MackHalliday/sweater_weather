@@ -1,8 +1,6 @@
 # Sweater Weather
 #### Created by: [Mack Halliday](https://github.com/MackHalliday)
 
-[Visit the Deployed Verison of the Application Here](https://sweater-weather-halliday.herokuapp.com/)
-
 ### About the Project
 
 * [Project Requirements](https://backend.turing.io/module3/projects/sweater_weather)
@@ -39,22 +37,68 @@ Returns current weather and forecast for location
 #### Create User Account
 
   Creates a user with valid emails and password matching password confirmation
+  
+  If successful, will return user's API key and 201 status
 
   ```POST /api/v1/users```
+  
+  ``` body 
+    {
+     "email": "whatever@example.com",
+     "password": "password",
+     "password_confirmation": "password"
+     }
+  ```
+  
+  ```email```: Must be valid email not already used by another user
+  
+  ```password```: Desired password
+  
+  ```password_confirmation```: Must match password
 
 #### Login User
 
   Logins in user with correct password
+  
+  If successful, will return user's API key and 201 status
+  
 
   ```POST /api/v1/sessions ```
-
+  
+  ``` body 
+    {
+     "email": "whatever@example.com",
+     "password": "password",
+     }
+  ```
+  
+  ```email```: Must match email used to create account
+  
+  ```password```: Must match password used to create account
+  
 #### Road Trip
 
   Returns details for road trip including travel time and weather at destination
+  
+  If successful, will return details for road trip
 
   Must include valid API key
 
   ``` POST /api/v1/road_trip ```
+  
+  ``` body 
+    {
+      origin: "Denver,CO",
+      destination: "Pueblo,CO",
+      api_key: "YOUR_API_KEY"
+     }
+  ```
+  
+  ```origin```: Starting city with state or country
+  
+  ```destination```: Ending cit with state or country 
+  
+  ```api_key```: Valid API key given to user when account created
 
 ## Local Setup
 
@@ -103,14 +147,8 @@ $ rails s
 - Add desired endpoint to localhost address
 
 ## Technologies
-NEED TO FINISH ADDING TECHS
-* [Stimulus](https://github.com/stimulusjs/stimulus)
-* [will_paginate](https://github.com/mislav/will_paginate)
-* [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
-* [webpacker](https://github.com/rails/webpacker)
+
 * [vcr](https://github.com/vcr/vcr)
-* [selenium-webdriver](https://www.seleniumhq.org/docs/03_webdriver.jsp)
-* [chromedriver-helper](http://chromedriver.chromium.org/)
 * [figaro](https://github.com/laserlemon/figaro)
 
 ### Versions
