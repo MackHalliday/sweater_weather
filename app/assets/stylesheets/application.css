@@ -13,3 +13,83 @@
  *= require_tree .
  *= require_self
  */
+
+ /* / Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap"; */
+
+/* body {
+ background-color: white;
+ } */
+
+ /* h1 {
+  text-align: center;
+ 	font-size: 40px;
+ 	color: #002244;
+ 	font-family: "Marker Felt", fantasy;
+ } */
+
+ /* .grid-container{
+ 	display: grid;
+ 	grid-template-columns: repeat(5,1fr);
+ 	grid-template-rows: auto;
+ 	grid-gap: 30px;
+ }
+
+ .grid-item{
+ 	background-color: #17BEBB;
+ 	padding: 20px;
+  border: solid;
+ 	border-radius: 12px;
+  border-color: #002244;
+ 	text-align: center
+ }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #f2f2f2;
+  text-align: center;
+  padding: 8px;
+} */
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/toasts";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/spinners";
+@import "bootstrap/utilities";
+@import "bootstrap/print";
