@@ -9,19 +9,22 @@
 
 * [GitHub Project Board](https://github.com/MackHalliday/sweater_weather/projects/1)
 
-FINISH SUMMARY OF PROJECTS
+ SweaterWeather is an API application with endpoints to return local weather, a city background image, and roadtrip information. The application also can create and login a user with a post request.
 
 ## Endpoints
 #### Local Weather
 ```/api/v1/forecast?location=denver,co```
 
 ```location```: desired city location
+[Example](https://sweater-weather-halliday.herokuapp.com/api/v1/forecast?location=denver,co)
 #### City Background Image
 ```/api/v1/backgrounds?location=denver,co```
 
 ```location```: desired city location
 
 Returns large image with orientation as landscape
+
+[Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
 #### Create User Account
 ```/api/v1/users```
 #### Login User
@@ -46,12 +49,21 @@ Set up the database
 ```
 $ rake db:create
 $ rake db:migrate
-$ rake db:seed
+
 ```
 
-Add API Keys
-- Open `application.yml` file
-- NEED TO FINISH 
+Add the following API Key to your `application.yml` file
+
+``` 
+google_geocode: YOUR_GOOGLE_API_KEY
+dark_sky: YOUR_DARK_SKY_API_KEY
+antipode: oscar_the_grouch
+unsplash_access_key: YOUR_UNSPLASH_API_KEY
+```
+Where to get API Keys
+[Google](https://developers.google.com/maps/documentation/javascript/get-api-key)
+[Dark_Sky](https://darksky.net/dev)
+[Unsplash](https://unsplash.com/developers)
 
 ## Testing Suite
 Run the test suite:
@@ -65,6 +77,7 @@ Run application locally:
 $ rails s
 ```
 - Visit `http://localhost:3000/` in Chrome browser 
+- Add desired endpoint to localhost address
 
 ## Technologies
 NEED TO FINISH ADDING TECHS
