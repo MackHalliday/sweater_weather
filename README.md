@@ -1,7 +1,7 @@
 # Sweater Weather
 #### Created by: [Mack Halliday](https://github.com/MackHalliday)
 
-[Visit the Deployed Verison of the Application Here](https://warm-oasis-92262.herokuapp.com/)
+[Visit the Deployed Verison of the Application Here](https://sweater-weather-halliday.herokuapp.com/)
 
 ### About the Project
 
@@ -12,6 +12,12 @@
  SweaterWeather is an API application with endpoints to return local weather, a city background image, and roadtrip information. The application also can create and login a user with a post request.
 
 ## Endpoints
+
+#### Root 
+Application address
+
+``` https://sweater-weather-halliday.herokuapp.com/```
+
 #### Local Weather
 Returns current weather and forecast for location
 
