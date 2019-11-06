@@ -13,7 +13,7 @@ describe "roadtrip endpoint" do
 
     post "/api/v1/road_trip", as: :json, params: request_body
 
-    expect(response).to be_successful
+    expect(response).to have_http_status(400)
 
     json_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -23,5 +23,24 @@ describe "roadtrip endpoint" do
     expect(json_response[:data][:trip]).to have_key(:estimated_arrival)
     expect(json_response[:data][:arrival_forecast]).to have_key(:summary)
     expect(json_response[:data][:arrival_forecast]).to have_key(:temperature)
+  end
+
+  it "renders 401 if invalid api key" do
+    skip 
+    user = User.create!(email: "whatever@example.com", password: "password", token: "jgn983hy48thw9begh98h4539h4")
+
+    request_body = {
+                    origin: "Denver,CO",
+                    destination: "Pueblo,CO",
+                    api_key: "123"
+                    }
+
+    post "/api/v1/road_trip", as: :json, params: request_body
+
+    expect(response).to have_http_status(401)
+
+    expected = {error: "Invalid request."}
+
+    expect(response.body).to eq(expected.to_json)
   end
 end
