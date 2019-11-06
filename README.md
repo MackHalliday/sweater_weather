@@ -1,10 +1,5 @@
 
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/0ce99e4df2ccdf584d88)
-
-
-
-
 # Sweater Weather
 #### Created by: [Mack Halliday](https://github.com/MackHalliday)
 
@@ -62,6 +57,8 @@ Returns current weather and forecast for location
   ```password```: Desired password
   
   ```password_confirmation```: Must match password
+  
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/0391478d4797e0605eef)
 
 ### Login User
 
@@ -82,6 +79,8 @@ Returns current weather and forecast for location
   ```email```: Must match email used to create account
   
   ```password```: Must match password used to create account
+  
+  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/02164a249f505f30e528)
   
 ### Road Trip
 
@@ -106,6 +105,8 @@ Returns current weather and forecast for location
   ```destination```: Ending cit with state or country 
   
   ```api_key```: Valid API key given to user when account created
+  
+  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/25c04179c6f5520f5215)
 
 ## Local Setup
 
