@@ -1,20 +1,20 @@
 class RoadTripFacade
   def initialize(road_trip_params)
-    @origin = road_trip_params[:origin]
-    @destination =  road_trip_params[:destination]
+    @origin = location_info(road_trip_params[:origin])
+    @destination =  location_info(road_trip_params[:destination])
     @api_key = road_trip_params[:api_key]
   end
 
-  def geocode_data
-    @geocode_data ||= GoogleGeocodeService.new.get_geocode_data(@destination)
+  def geocode_data(location)
+    GoogleService.new.get_geocode_data(location)
   end
 
-  def location_info
-    @location_info ||= Location.new(geocode_data)
+  def location_info(location)
+    Location.new(geocode_data(location))
   end
 
   def directions
-    @directions ||= GoogleDirectionsService.new.get_directions(@origin, @destination )
+    @directions ||= GoogleService.new.get_directions(@origin.formatted_address, @destination.formatted_address)
   end
 
   def direction_info
@@ -22,22 +22,14 @@ class RoadTripFacade
   end
 
   def dark_sky_forecasted_data
-    #https://api.darksky.net/forecast/[key]/[latitude],[longitude],[time]
-    @dark_sky_data ||= DarkSkyService.new.get_forecasted_weather(location_info.latitude, location_info.longitude, direction_info.arrival_time)
+    @dark_sky_data ||= DarkSkyService.new.get_forecasted_weather(@destination.latitude, @destination.location_info.longitude, direction_info.arrival_time)
   end
 
   def arrival_forecast
     ArrivalForecast.new(dark_sky_forcasted_data)
-    #summary, #temperature
-  end
-
-  def trip
-    direct_information
-    #origin, destination, distance, :estimated_arrival
   end
 
   def data
-    direct_information
-    #calls all methods needed to create JSON hash
+    RoadTripData.new(direction_info, arrival_forecast)
   end
 end
