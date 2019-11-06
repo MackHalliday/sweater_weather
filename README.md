@@ -22,33 +22,33 @@ Returns current weather and forecast for location
 [Example](https://sweater-weather-halliday.herokuapp.com/api/v1/forecast?location=denver,co)
 #### City Background Image
 
-Returns large image with orientation as landscape
+  Returns large image with orientation as landscape
 
-``` GET /api/v1/backgrounds?location=denver,co```
+  ``` GET /api/v1/backgrounds?location=denver,co```
 
-```location```: desired city location with state or country
+  ```location```: desired city location with state or country
 
-[Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
+  [Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
 
 #### Create User Account
 
-Creates a user with valid emails and password matching password confirmation
+  Creates a user with valid emails and password matching password confirmation
 
-```POST /api/v1/users```
+  ```POST /api/v1/users```
 
 #### Login User
 
-Logins in user with correct password
+  Logins in user with correct password
 
-```POST /api/v1/sessions ```
+  ```POST /api/v1/sessions ```
 
 #### Road Trip
 
-Returns details for road trip including travel time and weather at destination
+  Returns details for road trip including travel time and weather at destination
 
-Must include valid API key
+  Must include valid API key
 
-``` POST /api/v1/road_trip ```
+  ``` POST /api/v1/road_trip ```
 
 ## Local Setup
 
@@ -77,10 +77,10 @@ dark_sky: YOUR_DARK_SKY_API_KEY
 antipode: oscar_the_grouch
 unsplash_access_key: YOUR_UNSPLASH_API_KEY
 ```
-Where to get API Keys
-[Google](https://developers.google.com/maps/documentation/javascript/get-api-key)
-[Dark_Sky](https://darksky.net/dev)
-[Unsplash](https://unsplash.com/developers)
+  Where to get API Keys
+   * [Google](https://developers.google.com/maps/documentation/javascript/get-api-key)
+   * [Dark_Sky](https://darksky.net/dev)
+   * [Unsplash](https://unsplash.com/developers)
 
 ## Testing Suite
 Run the test suite:
