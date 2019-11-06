@@ -25,7 +25,7 @@ Returns current weather and forecast for location
 
 ```location```: desired city location with state or country
 
-[View Example](https://sweater-weather-halliday.herokuapp.com/api/v1/forecast?location=denver,co)
+[![View Example](https://run.pstmn.io/button.svg)](https://sweater-weather-halliday.herokuapp.com/api/v1/forecast?location=denver,co)
 ### City Background Image
 
   Returns large image with orientation as landscape
@@ -34,7 +34,7 @@ Returns current weather and forecast for location
 
   ```location```: desired city location with state or country
 
-  [View Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
+  [![View Example](https://run.pstmn.io/button.svg)](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
 
 ### Create User Account
 
