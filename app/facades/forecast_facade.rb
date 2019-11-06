@@ -4,15 +4,16 @@ class ForecastFacade
   end
 
   def geocode_data
-    GoogleGeocodeService.new.get_geocode_data(@location)
+    @geocode_data ||= GoogleGeocodeService.new.get_geocode_data(@location)
   end
 
   def location_info
-    Location.new(geocode_data)
+    @location_info ||= Location.new(geocode_data)
   end
 
   def dark_sky_data
-    DarkSkyService.new.get_weather(location_info.latitude, location_info.longitude)
+    @dark_sky_data ||= DarkSkyService.new.get_weather(location_info.latitude, location_info.longitude)
+
   end
 
   def current_data
@@ -24,16 +25,21 @@ class ForecastFacade
   end
 
   def current_weather
-    CurrentWeather.new(current_data)
+    @current_weather ||= CurrentWeather.new(current_data)
   end
 
   def daily_weather
-    daily_data.map do |data|
-      DailyWeather.new(data)
+
+    daily_data.map.each_with_index do |data, index|
+      DailyWeather.new(data, index + 1)
     end
   end
 
   def summary
-    Summary.new(dark_sky_data)
+    @summary ||= Summary.new(dark_sky_data)
+  end
+
+  def data
+    ForecastData.new(summary, location_info, current_weather, daily_weather)
   end
 end
