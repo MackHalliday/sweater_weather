@@ -13,7 +13,6 @@ class ForecastFacade
 
   def dark_sky_data
     @dark_sky_data ||= DarkSkyService.new.get_weather(location_info.latitude, location_info.longitude)
-
   end
 
   def current_data
