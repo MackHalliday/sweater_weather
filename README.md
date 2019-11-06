@@ -11,7 +11,7 @@
  * [Running Application](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#running-application)
  * [Tech](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#tech)
 
-### About the Project
+## About the Project
 
 * [Project Requirements](https://backend.turing.io/module3/projects/sweater_weather)
 
