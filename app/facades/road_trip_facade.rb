@@ -17,19 +17,19 @@ class RoadTripFacade
     @directions ||= GoogleService.new.get_directions(@origin.formatted_address, @destination.formatted_address)
   end
 
-  def direction_info
+  def route_info
     Route.new(@origin, @destination, directions)
   end
 
   def dark_sky_forecasted_data
-    @dark_sky_data ||= DarkSkyService.new.get_forecasted_weather(@destination.latitude, @destination.location_info.longitude, direction_info.arrival_time)
+    @dark_sky_data ||= DarkSkyService.new.get_forecasted_weather(@destination.latitude, @destination.longitude, route_info.arrival_time_unix)
   end
 
   def arrival_forecast
-    ArrivalForecast.new(dark_sky_forcasted_data)
+    CurrentWeather.new(dark_sky_forecasted_data[:currently])
   end
 
   def data
-    RoadTripData.new(direction_info, arrival_forecast)
+    RoadTripData.new(route_info, arrival_forecast)
   end
 end
