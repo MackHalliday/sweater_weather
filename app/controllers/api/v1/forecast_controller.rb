@@ -1,4 +1,4 @@
-class Api::V1::ForecastController < ApplicationController
+class Api::V1::ForecastController< ApplicationController
   def show
     facade = ForecastFacade.new(location_params)
     render json: ForecastSerializer.new(facade)
