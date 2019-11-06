@@ -6,7 +6,7 @@ class Api::V1::RoadTripController < ApplicationController
       facade = RoadTripFacade.new(params[:road_trip])
       render json: RoadTripSerializer.new(facade)
     else
-      render json: {error: "Invalid request."}, status: 400
+      render json: {error: "Invalid request."}, status: 401
     end
   end
 end
