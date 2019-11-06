@@ -13,25 +13,42 @@
 
 ## Endpoints
 #### Local Weather
-```/api/v1/forecast?location=denver,co```
+Returns current weather and forecast for location
 
-```location```: desired city location
+``` GET /api/v1/forecast?location=denver,co```
+
+```location```: desired city location with state or country
+
 [Example](https://sweater-weather-halliday.herokuapp.com/api/v1/forecast?location=denver,co)
 #### City Background Image
-```/api/v1/backgrounds?location=denver,co```
-
-```location```: desired city location
 
 Returns large image with orientation as landscape
 
-[Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
-#### Create User Account
-```/api/v1/users```
-#### Login User
-``` /api/v1/sessions ```
-#### Road Trip
-``` /api/v1/road_trip ```
+``` GET /api/v1/backgrounds?location=denver,co```
 
+```location```: desired city location with state or country
+
+[Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
+
+#### Create User Account
+
+Creates a user with valid emails and password matching password confirmation
+
+```POST /api/v1/users```
+
+#### Login User
+
+Logins in user with correct password
+
+```POST /api/v1/sessions ```
+
+#### Road Trip
+
+Returns details for road trip including travel time and weather at destination
+
+Must include valid API key
+
+``` POST /api/v1/road_trip ```
 
 ## Local Setup
 
