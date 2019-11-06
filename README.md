@@ -1,3 +1,5 @@
+
+
 # Sweater Weather
 #### Created by: [Mack Halliday](https://github.com/MackHalliday)
 
@@ -10,6 +12,13 @@
  SweaterWeather is an API application with endpoints to return local weather, a city background image, and roadtrip information. The application also can create and login a user with a post request.
 
 ## Endpoints
+
+ * [Root](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#root)
+ * [Local Weather](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local-weather)
+ * [City Background Image](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#city-background-image)
+ * [Create User Account](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#create-user-account)
+ * [Login User](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#login-user)
+ * [Road Trip](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#road-trip)
 
 ### Root 
 Application address
@@ -55,6 +64,8 @@ Returns current weather and forecast for location
   ```password```: Desired password
   
   ```password_confirmation```: Must match password
+  
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/0391478d4797e0605eef)
 
 ### Login User
 
@@ -75,6 +86,8 @@ Returns current weather and forecast for location
   ```email```: Must match email used to create account
   
   ```password```: Must match password used to create account
+  
+  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/02164a249f505f30e528)
   
 ### Road Trip
 
@@ -99,6 +112,8 @@ Returns current weather and forecast for location
   ```destination```: Ending cit with state or country 
   
   ```api_key```: Valid API key given to user when account created
+  
+  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/25c04179c6f5520f5215)
 
 ## Local Setup
 
@@ -150,6 +165,8 @@ $ rails s
 
 * [vcr](https://github.com/vcr/vcr)
 * [figaro](https://github.com/laserlemon/figaro)
+* [faraday](https://github.com/lostisland/faraday)
+* [bcrypt](https://rubygems.org/gems/bcrypt/versions/3.1.12)
 
 ### Versions
 * Ruby 2.4.1
