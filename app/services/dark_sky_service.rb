@@ -5,6 +5,11 @@ class DarkSkyService
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
   end
 
+  def get_forecasted_weather(latitude, longitude, arrival_time)
+    json_response = conn.get("/forecast/#{ENV['dark_sky']}/#{latitude},#{longitude},#{arrival_time}")
+    parsed_data = JSON.parse(json_response.body, symbolize_names: true)
+  end
+
   private
   def conn
     Faraday.new(

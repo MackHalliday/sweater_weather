@@ -4,7 +4,7 @@ class BackgroundsFacade
   end
 
   def geocode_data
-    @geocode_date ||= GoogleGeocodeService.new.get_geocode_data(@location)
+    @geocode_date ||= GoogleService.new.get_geocode_data(@location)
   end
 
   def location_info

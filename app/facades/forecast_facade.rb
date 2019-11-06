@@ -4,7 +4,7 @@ class ForecastFacade
   end
 
   def geocode_data
-    @geocode_data ||= GoogleGeocodeService.new.get_geocode_data(@location)
+    @geocode_data ||= GoogleService.new.get_geocode_data(@location)
   end
 
   def location_info
@@ -13,7 +13,6 @@ class ForecastFacade
 
   def dark_sky_data
     @dark_sky_data ||= DarkSkyService.new.get_weather(location_info.latitude, location_info.longitude)
-
   end
 
   def current_data
