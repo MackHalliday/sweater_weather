@@ -9,10 +9,7 @@ describe "local weather endpoint" do
 
     json_response = JSON.parse(response.body, symbolize_names: true)
 
-
-    expect(json_response[:data][:location]).to have_key(:city)
-    expect(json_response[:data][:location]).to have_key(:state)
-    expect(json_response[:data][:location]).to have_key(:country)
+    expect(json_response[:data][:location]).to have_key(:formatted_address)
 
     expect(json_response[:data][:summary]).to have_key(:current)
     expect(json_response[:data][:summary]).to have_key(:in_six_hours)
