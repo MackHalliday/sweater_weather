@@ -11,12 +11,12 @@
 
 ## Endpoints
 
-#### Root 
+### Root 
 Application address
 
 ``` https://sweater-weather-halliday.herokuapp.com/```
 
-#### Local Weather
+### Local Weather
 Returns current weather and forecast for location
 
 ``` GET /api/v1/forecast?location=denver,co```
@@ -24,7 +24,7 @@ Returns current weather and forecast for location
 ```location```: desired city location with state or country
 
 [Example](https://sweater-weather-halliday.herokuapp.com/api/v1/forecast?location=denver,co)
-#### City Background Image
+### City Background Image
 
   Returns large image with orientation as landscape
 
@@ -34,7 +34,7 @@ Returns current weather and forecast for location
 
   [Example](https://sweater-weather-halliday.herokuapp.com/api/v1/backgrounds?location=denver,co)
 
-#### Create User Account
+### Create User Account
 
   Creates a user with valid emails and password matching password confirmation
   
@@ -56,7 +56,7 @@ Returns current weather and forecast for location
   
   ```password_confirmation```: Must match password
 
-#### Login User
+### Login User
 
   Logins in user with correct password
   
@@ -76,7 +76,7 @@ Returns current weather and forecast for location
   
   ```password```: Must match password used to create account
   
-#### Road Trip
+### Road Trip
 
   Returns details for road trip including travel time and weather at destination
   
