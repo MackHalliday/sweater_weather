@@ -14,11 +14,11 @@
 ## Endpoints
 
  * [Root](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#root)
- * [Local Weather](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local_weather)
- * [City Background Image](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#city_background_image)
- * [Create User Account](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#create_user_account)
- * [Login User](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#login_user)
- * [Road Trip](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#road_trip)
+ * [Local Weather](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local-weather)
+ * [City Background Image](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#city-background-image)
+ * [Create User Account](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#create-user-account)
+ * [Login User](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#login-user)
+ * [Road Trip](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#road-trip)
 
 ### Root 
 Application address
