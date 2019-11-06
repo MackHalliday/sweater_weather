@@ -13,7 +13,7 @@ describe "roadtrip endpoint" do
 
     post "/api/v1/road_trip", as: :json, params: request_body
 
-    expect(response).to have_http_status(400)
+    expect(response).to have_http_status(200)
 
     json_response = JSON.parse(response.body, symbolize_names: true)
 
