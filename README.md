@@ -3,6 +3,14 @@
 # Sweater Weather
 #### Created by: [Mack Halliday](https://github.com/MackHalliday)
 
+## Contents 
+ * [About](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#about-the-project)
+ * [Endpoints](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#endpoints)
+ * [Local Setup](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local_setup)
+ * [Testing Suite](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#testing-suite)
+ * [Running Application](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#running-application)
+ * [Tech](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#tech)
+
 ### About the Project
 
 * [Project Requirements](https://backend.turing.io/module3/projects/sweater_weather)
@@ -10,14 +18,7 @@
 * [GitHub Project Board](https://github.com/MackHalliday/sweater_weather/projects/1)
 
  SweaterWeather is an API application with endpoints to return local weather, a city background image, and roadtrip information. The application also can create and login a user with a post request.
- 
-## Contents 
- * [Endpoints](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#endpoints)
- * [Local Setup](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#local_setup)
- * [Testing Suite](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#testing-suite)
- * [Running Application](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#running-application)
- * [Tech](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#tech)
- 
+
 ## Endpoints
 
  * [Root](https://github.com/MackHalliday/sweater_weather/blob/master/README.md#root)
