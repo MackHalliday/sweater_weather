@@ -1,24 +1,67 @@
-# README
+# Brownfield Of Dreams
+#### Created by: Mack Halliday](https://github.com/MackHalliday)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Visit the Deployed Verison of the Application Here](https://warm-oasis-92262.herokuapp.com/)
 
-Things you may want to cover:
+### About the Project
 
-* Ruby version
+* [Project Requirements](https://backend.turing.io/module3/projects/sweater_weather)
 
-* System dependencies
+* [GitHub Project Board](https://github.com/MackHalliday/sweater_weather/projects/1)
 
-* Configuration
+FINISH SUMMARY OF PROJECTS
 
-* Database creation
+## Endpoints
+FINISH LIST OF ENDPOINTS
 
-* Database initialization
+## Local Setup
 
-* How to run the test suite
+Clone down the repo
+```
+$ git clone
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Install the gem packages
+```
+$ bundle install
+```
 
-* Deployment instructions
+Set up the database
+```
+$ rake db:create
+$ rake db:migrate
+$ rake db:seed
+```
 
-* ...
+Add API Keys
+- Open `application.yml` file
+- NEED TO FINISH 
+
+
+## Testing Suite
+Run the test suite:
+```
+$ rspec
+```
+
+## Running Application Locally 
+Run application locally:
+```
+$ rails s
+```
+- Visit `http://localhost:3000/` in Chrome browser 
+
+## Technologies
+NEED TO FINISH ADDING TECHS
+* [Stimulus](https://github.com/stimulusjs/stimulus)
+* [will_paginate](https://github.com/mislav/will_paginate)
+* [acts-as-taggable-on](https://github.com/mbleigh/acts-as-taggable-on)
+* [webpacker](https://github.com/rails/webpacker)
+* [vcr](https://github.com/vcr/vcr)
+* [selenium-webdriver](https://www.seleniumhq.org/docs/03_webdriver.jsp)
+* [chromedriver-helper](http://chromedriver.chromium.org/)
+* [figaro](https://github.com/laserlemon/figaro)
+
+### Versions
+* Ruby 2.4.1
+* Rails 5.2.0
