@@ -17,8 +17,8 @@ describe "roadtrip endpoint" do
 
     json_response = JSON.parse(response.body, symbolize_names: true)
 
-    expect(json_response[:data][:trip]).to have_key(:start_location)
-    expect(json_response[:data][:trip]).to have_key(:end_location)
+    expect(json_response[:data][:trip]).to have_key(:origin)
+    expect(json_response[:data][:trip]).to have_key(:destination)
     expect(json_response[:data][:trip]).to have_key(:distance)
     expect(json_response[:data][:trip]).to have_key(:estimated_arrival)
     expect(json_response[:data][:arrival_forecast]).to have_key(:summary)
@@ -26,7 +26,7 @@ describe "roadtrip endpoint" do
   end
 
   it "renders 401 if invalid api key" do
-    skip 
+    skip
     user = User.create!(email: "whatever@example.com", password: "password", token: "jgn983hy48thw9begh98h4539h4")
 
     request_body = {
