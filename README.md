@@ -1,5 +1,5 @@
 # Brownfield Of Dreams
-#### Created by: Mack Halliday](https://github.com/MackHalliday)
+#### Created by: [Mack Halliday](https://github.com/MackHalliday)
 
 [Visit the Deployed Verison of the Application Here](https://warm-oasis-92262.herokuapp.com/)
 
