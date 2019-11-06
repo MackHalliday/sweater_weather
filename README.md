@@ -12,7 +12,23 @@
 FINISH SUMMARY OF PROJECTS
 
 ## Endpoints
-FINISH LIST OF ENDPOINTS
+#### Local Weather
+```/api/v1/forecast?location=denver,co```
+
+```location```: desired city location
+#### City Background Image
+```/api/v1/backgrounds?location=denver,co```
+
+```location```: desired city location
+
+Returns large image with orientation as landscape
+#### Create User Account
+```/api/v1/users```
+#### Login User
+``` /api/v1/sessions ```
+#### Road Trip
+``` /api/v1/road_trip ```
+
 
 ## Local Setup
 
